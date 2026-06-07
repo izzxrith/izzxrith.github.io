@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Ayet</title>
+  <meta name="description" content="About Muhamad Ayet — IT graduate, software developer, amateur boxer from Malaysia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .about-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start;
+    }
+    .about-bio { font-size: 1rem; color: #aaa; line-height: 1.95; }
+    .about-bio strong { color: var(--text); }
+    .about-bio p + p { margin-top: 1.2rem; }
+
+    .info-table { display: flex; flex-direction: column; gap: 0; }
+    .info-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.1rem 0; border-bottom: 1px solid var(--border);
+    }
+    .info-row:first-child { border-top: 1px solid var(--border); }
+    .ir-label { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .ir-value { font-weight: 700; font-size: 0.9rem; text-align: right; max-width: 55%; }
+
+    /* Achievements */
+    .ach-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border); margin-top: 4rem;
+    }
+    .ach-card {
+      background: var(--bg2); padding: 2.5rem; transition: background 0.3s;
+    }
+    .ach-card:hover { background: var(--bg3); }
+    .ach-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .ach-title { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+    .ach-desc { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); line-height: 1.7; }
+    .ach-badge {
+      display: inline-block; margin-top: 0.75rem;
+      font-family: var(--mono); font-size: 0.6rem; color: var(--accent);
+      border: 1px solid rgba(232,255,71,0.3); padding: 0.2rem 0.6rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+
+    /* Values */
+    .values-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
+      background: var(--border); margin-top: 1px;
+    }
+    .value-card {
+      background: var(--bg); padding: 2rem;
+    }
+    .v-num { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .v-title { font-weight: 700; font-size: 0.95rem; }
+
+    /* Boxing */
+    .boxing-banner {
+      background: var(--bg3); border: 1px solid var(--border);
+      padding: 2.5rem; display: flex; align-items: center; gap: 3rem;
+      margin-top: 4rem;
+    }
+    .boxing-icon { font-size: 3rem; flex-shrink: 0; }
+    .boxing-text h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .boxing-text p { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ach-grid, .values-grid { grid-template-columns: 1fr; }
+      .boxing-banner { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">ayet.me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <!-- Page Hero -->
+    <div class="page-hero reveal">
+      <div class="page-hero-tag">About Me</div>
+      <h1>Who I<br>Am<span>.</span></h1>
+    </div>
+
+    <!-- Bio + Info -->
+    <div class="section-inner">
+      <div class="about-grid reveal">
+        <div class="about-bio">
+          <p>I'm <strong>Muhamad Izzarith</strong>, a 22-year-old <strong>Diploma in Information Technology (Software and Development)</strong> graduate from <strong>Politeknik Ungku Omar, Malaysia</strong>.</p>
+          <p>I build software that solves real problems from healthcare accessibility apps to gym training trackers. My approach is simple which to understand the problem deeply, then engineer a clean solution.</p>
+          <p>I graduated with a <strong>4.00 CGPA</strong> maintained across all 5 semesters, won <strong>Best Overall Project</strong> at JTMK ICE 2026 competing against 40+ teams and placed <strong>4th at the Huawei × UMPSA Mobile Apps Hackathon 2025</strong>.</p>
+          <p>I'm actively looking for my first industry role as a <strong>Software Developer, Junior Engineer, Website Developer</strong> or <strong>Mobile App Developer</strong> — somewhere I can learn from experienced engineers and contribute to real products.</p>
+        </div>
+        <div class="info-table">
+          <div class="info-row">
+            <span class="ir-label">Full Name</span>
+            <span class="ir-value">Muhamad Izzarith</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">Age</span>
+            <span class="ir-value">22 years old</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">Education</span>
+            <span class="ir-value">Diploma in IT — Software and Development</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">Institution</span>
+            <span class="ir-value">Politeknik Ungku Omar</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">CGPA</span>
+            <span class="ir-value">4.00 / 4.00</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">Location</span>
+            <span class="ir-value">Malaysia 🇲🇾</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">Open To</span>
+            <span class="ir-value">Full-time · Part Time · Internship</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">Boxing</span>
+            <span class="ir-value">Amateur & Professional · 8+ Fights</span>
+          </div>
+          <div class="info-row">
+            <span class="ir-label">BoxRec</span>
+            <span class="ir-value">Muhammad Izzarith</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="ach-grid reveal">
+        <div class="ach-card">
+          <div class="ach-icon">🏆</div>
+          <div class="ach-title">Best Overall Project</div>
+          <div class="ach-desc">JTMK ICE 2026/2027 — ranked #1 among 40+ competing teams. Judged on technical depth, innovation, teamwork and real-world impact.</div>
+          <span class="ach-badge">2026</span>
+        </div>
+        <div class="ach-card">
+          <div class="ach-icon">🥉</div>
+          <div class="ach-title">4th Place — Hackathon</div>
+          <div class="ach-desc">Huawei × UMPSA Mobile Apps Hackathon 2025. Built and presented a complete mobile application under competition pressure.</div>
+          <span class="ach-badge">2025</span>
+        </div>
+        <div class="ach-card">
+          <div class="ach-icon">🎓</div>
+          <div class="ach-title">Perfect CGPA</div>
+          <div class="ach-desc">4.00/4.00 maintained across all 5 semesters of the Diploma in IT programme while balancing projects, hackathons and extra-curricular activities.</div>
+          <span class="ach-badge">2024 – 2026</span>
+        </div>
+      </div>
+
+      <!-- Boxing Banner -->
+      <div class="boxing-banner reveal">
+        <div class="boxing-icon">🥊</div>
+        <div class="boxing-text">
+          <h3>Beyond the Code</h3>
+          <p>I'm an amateur and professional boxer with 8+ recorded fights. The same values that keep you in the ring  discipline, consistency and the ability to take a hit and keep moving are the same ones I bring to engineering. Every bug is a round you have to win.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Values -->
+    <div class="section-inner">
+      <div class="section-label" data-num="">Personal Values</div>
+      <div class="values-grid reveal">
+        <div class="value-card"><div class="v-num">01</div><div class="v-title">Continuous Learning</div></div>
+        <div class="value-card"><div class="v-num">02</div><div class="v-title">Discipline</div></div>
+        <div class="value-card"><div class="v-num">03</div><div class="v-title">Teamwork</div></div>
+        <div class="value-card"><div class="v-num">04</div><div class="v-title">Problem Solving</div></div>
+        <div class="value-card"><div class="v-num">05</div><div class="v-title">Build Useful Tech</div></div>
+        <div class="value-card"><div class="v-num">06</div><div class="v-title">Growth Mindset</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <footer>
+    <div class="footer-copy">© 2026 <span>Ayet</span> — Built with intention.</div>
+    <a href="index.html" class="footer-back">← Home</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Ayet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact-layout {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    }
+
+    /* Left side */
+    .contact-intro {
+      font-family: var(--mono); font-size: 0.8rem; color: var(--muted); line-height: 2;
+      margin-bottom: 2.5rem;
+    }
+    .contact-intro strong { color: var(--text); }
+
+    .contact-links { display: flex; flex-direction: column; }
+    .contact-link {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 0; border-bottom: 1px solid var(--border);
+      text-decoration: none; color: var(--text); transition: color 0.2s;
+    }
+    .contact-link:first-child { border-top: 1px solid var(--border); }
+    .contact-link:hover { color: var(--accent); }
+    .contact-link:hover .cl-arrow { transform: translate(4px,-4px); }
+    .cl-left { display: flex; flex-direction: column; gap: 0.2rem; }
+    .cl-label { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; }
+    .cl-value { font-size: 0.9rem; font-weight: 600; }
+    .cl-arrow { transition: transform 0.2s; font-size: 1rem; color: var(--muted); }
+    .contact-link:hover .cl-arrow { color: var(--accent); }
+
+    /* Right side — Form */
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-field { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-label {
+      font-family: var(--mono); font-size: 0.85rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.15em;
+    }
+    .form-input, .form-textarea {
+      background: var(--bg2); border: 1px solid var(--border);
+      color: var(--text); padding: 0.9rem 1rem;
+      font-family: var(--mono); font-size: 0.82rem;
+      outline: none; transition: border-color 0.2s; resize: none;
+      width: 100%;
+    }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+    .form-input::placeholder, .form-textarea::placeholder { color: #444; }
+    .form-textarea { min-height: 130px; }
+
+    .form-submit { display: flex; align-items: center; gap: 1rem; }
+    .form-note { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
+
+    /* Success message */
+    .form-success {
+      display: none; background: rgba(232,255,71,0.07);
+      border: 1px solid rgba(232,255,71,0.3); padding: 1rem;
+      font-family: var(--mono); font-size: 0.85rem; color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo">ayet.me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <div class="page-hero reveal">
+      <div class="page-hero-tag">Get in Touch</div>
+      <h1>Let's<br>Talk<span>.</span></h1>
+    </div>
+
+    <div class="section-inner">
+      <div class="contact-layout">
+
+        <!-- LEFT: Info -->
+        <div class="reveal">
+          <p class="contact-intro">
+            I'm actively looking for <strong>software development roles</strong> — junior engineer, web developer, fullstack or mobile. If you're hiring, collaborating or just want to connect, I'd love to hear from you. Feel free to find me on email as i prefer that for initial contact but my socials are open too!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:your@email.com" class="contact-link">
+              <div class="cl-left">
+                <span class="cl-label">Email</span>
+                <span class="cl-value">izzarith04@gmail.com</span>
+              </div>
+              <span class="cl-arrow">↗</span>
+            </a>
+            <a href="https://github.com/izzxrith" target="_blank" class="contact-link">
+              <div class="cl-left">
+                <span class="cl-label">GitHub</span>
+                <span class="cl-value">github.com/izzxrith</span>
+              </div>
+              <span class="cl-arrow">↗</span>
+            </a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank" class="contact-link">
+              <div class="cl-left">
+                <span class="cl-label">LinkedIn</span>
+                <span class="cl-value">www.linkedin.com/in/muhammad-izzarith</span>
+              </div>
+              <span class="cl-arrow">↗</span>
+            </a>
+            <a href="https://www.ayet.me" class="contact-link">
+              <div class="cl-left">
+                <span class="cl-label">Portfolio</span>
+                <span class="cl-value">ayet.me</span>
+              </div>
+              <span class="cl-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <div class="reveal">
+          <!-- Replace YOUR_FORM_ID after signing up at formspree.io (free) -->
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form-field">
+              <label class="form-label" for="name">Name</label>
+              <input id="name" type="text" name="name" class="form-input" placeholder="Your name" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="email">Email</label>
+              <input id="email" type="email" name="email" class="form-input" placeholder="your@email.com" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="subject">Subject</label>
+              <input id="subject" type="text" name="subject" class="form-input" placeholder="Job opportunity / Collaboration / Say hi" />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" name="message" class="form-textarea" placeholder="Tell me what's on your mind..." required></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+              <span class="form-note">Powered by Formspree (free)</span>
+            </div>
+            <div class="form-success" id="formSuccess">
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <footer>
+    <div class="footer-copy">© 2026 <span>Ayet</span> — Built with intention.</div>
+    <a href="index.html" class="footer-back">← Home</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Optional: Show success state on form submit (Formspree redirects by default)
+    // Only fires if you're using AJAX mode in Formspree settings
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        // Let Formspree handle normally unless you enable AJAX mode
+      });
+    }
+  </script>
+</body>
+</html>
