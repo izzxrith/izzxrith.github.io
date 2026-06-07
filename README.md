@@ -1,6 +1,6 @@
 # 🌐 ayet.me — Personal Portfolio
 
-> Personal portfolio website for Muhamad Izzarith — Software Developer, Mobile App Builder, Amateur Boxer.
+> Personal portfolio website for Muhamad Izzarith.
 
 **Live site → [ayet.me](https://ayet.me)**
 
