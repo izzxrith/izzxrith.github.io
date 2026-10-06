@@ -1,50 +1,50 @@
-# 🌐 ayet.me — Personal Portfolio
+# ⚡ ayet.me — Personal Portfolio v2
 
-> Personal portfolio website for Muhamad Izzarith.
+> Portfolio of **Muhammad Izzarith** — Junior Software Developer, Full-Stack Builder, Web Dev and Professional Boxer from Malaysia.
 
-**Live site → [ayet.me](https://ayet.me)**
+**Live -> [ayet.me](https://ayet.me)**
 
 ---
 
 ## 👨‍💻 About
 
-This is my personal portfolio website showcasing my projects, skills and background. Built from scratch with vanilla HTML, CSS and JavaScript which makes it no frameworks and no dependencies.
+Personal portfolio built from scratch with vanilla HTML, CSS and JavaScript. No frameworks, no dependencies - just clean, intentional code. Hosted on GitHub Pages with a custom domain via Namecheap.
 
 ---
 
 ## 📄 Pages
 
 | Page | Description |
-|------|-------------|
-| [Home](https://ayet.me) | Hero landing with quick navigation |
-| [About](https://ayet.me/about.html) | Background, education, achievements |
-| [Projects](https://ayet.me/projects.html) | CareLink, FightTrack and more |
-| [Skills](https://ayet.me/skills.html) | Languages, tools and concepts |
-| [Contact](https://ayet.me/contact.html) | Contact form and social links |
+|---|---|
+| [Home](https://ayet.me) | Hero, featured projects preview, boxing identity |
+| [About](https://ayet.me/about.html) | Bio, quick facts, achievements, boxing story |
+| [Projects](https://ayet.me/projects.html) | CareLink+, FightTrack SaaS, FightTrack and more |
+| [Skills](https://ayet.me/skills.html) | Current stack, mobile, backend, tools |
+| [Contact](https://ayet.me/contact.html) | Form + direct links + availability |
 
 ---
 
 ## 🛠️ Built With
 
-- **HTML5** — structure
-- **CSS3** — styling, animations, responsive layout
-- **Vanilla JavaScript** — cursor, scroll reveal, mobile menu
-- **Google Fonts** — Syne (headings) + Space Mono (labels)
-- **Formspree** — contact form backend
-- **GitHub Pages** — hosting
-- **Namecheap** — custom domain (`ayet.me`)
+- **HTML5** - semantic structure
+- **CSS3** - design system, custom tokens, responsive layout
+- **Vanilla JavaScript** - custom cursor, mobile nav, async form handler
+- **Google Fonts** - Syne (headings) + Space Mono (labels/meta)
+- **Formspree** - contact form backend
+- **GitHub Pages** - hosting
+- **Namecheap** - custom domain (`ayet.me`) via GitHub Student Pack
 
 ---
 
 ## ✨ Features
 
-- Dark minimal design
-- Custom animated cursor
-- Scroll reveal animations
-- Fully responsive (mobile-friendly)
-- Active nav link highlighting
+- Dark minimal design with lime accent (`#C8F542`)
+- Custom animated cursor (hover-aware, reduced-motion safe)
+- Fully responsive - tested at 375 / 768 / 1440
+- Accessible - semantic HTML, focus states, AA contrast, `prefers-reduced-motion`
+- Async contact form with Formspree - no page reload
 - Mobile hamburger menu
-- HTTPS enforced
+- Active nav link highlighting
 
 ---
 
@@ -53,24 +53,43 @@ This is my personal portfolio website showcasing my projects, skills and backgro
 ```
 izzxrith.github.io/
 ├── index.html          # Home / Hero
-├── about.html          # About me
+├── about.html          # About + achievements
 ├── projects.html       # Projects showcase
 ├── skills.html         # Technical skills
 ├── contact.html        # Contact form
 ├── css/
-│   └── style.css       # Shared styles
+│   └── style.css       # Shared design system
 ├── js/
-│   └── main.js         # Shared JavaScript
-└── CNAME               # Custom domain config
+│   └── main.js         # Cursor, nav, form handler
+└── CNAME               # Custom domain -> ayet.me
 ```
+
+---
+
+## 🚀 Featured Projects
+
+### CareLink+ — Android Mobile Application
+> Best Overall Project - JTMK ICE I 2026/2027 (40+ teams)
+
+Real-time health monitoring system for special needs students. Integrates wearable smartwatch data with predictive algorithms to detect risks early. 100+ students served, 40% reduction in reactive emergencies, <2s dual-device sync.
+
+**Stack:** Java · Android Studio · Firebase · Google Maps API · REST API
+
+### FightTrack SaaS — Multi-Tenant Web Platform
+> In Active Development - targeting public beta
+
+Multi-tenant SaaS platform for boxing gyms and coaches. Full data isolation per tenant, role-based access control, modern dashboard.
+
+**Stack:** Next.js 14 · TypeScript · Supabase · Prisma · Tailwind CSS · PostgreSQL · Zod · RLS
 
 ---
 
 ## 🏆 Achievements
 
-- 🏆 Best Overall Project — JTMK ICE 2026/2027 (40+ teams)
-- 🥉 4th Place — Huawei × UMPSA Mobile Apps Hackathon 2025
-- 🎓 4.00 CGPA — Diploma in IT, Politeknik Ungku Omar
+- **Best Overall Project** — JTMK ICE I 2026/2027 (Ranked #1, 40+ teams)
+- **3rd Place** — Hackathon Digitech Nusa 2026 (PUO Best Overall Champion)
+- **4th Place** — Huawei × UMPSA Mobile Apps Competition 2025 (100+ teams)
+- **CompTIA Security+** - 2026
 
 ---
 
@@ -83,4 +102,4 @@ izzxrith.github.io/
 
 ---
 
-© 2026 Muhamad Izzarith — Built with intention.
+© 2026 Muhammad Izzarith - Built with intention.
