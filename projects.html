@@ -3,209 +3,176 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Izzarith</title>
-  <meta name="description" content="Projects by Muhamad Izzarith — CareLink, FightTrack, Event Registration System, Student Record System." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="description" content="Projects by Muhammad Izzarith - CareLink+, FightTrack SaaS, FightTrack, portfolio and more." />
+  <title>Projects - Ayet</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .projects-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-
-    .project-card {
-      background: var(--bg);
-      display: grid; grid-template-columns: 80px 1fr auto;
-      align-items: start; padding: 2.5rem;
-      gap: 2rem; transition: background 0.25s;
-    }
-    .project-card:hover { background: var(--bg3); }
-    .project-card:hover .pc-arrow { transform: translate(4px,-4px); color: var(--accent); }
-
-    .proj-index { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); padding-top: 0.3rem; }
-
-    .proj-body {}
-    .proj-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
-    .proj-title { font-size: 1.4rem; font-weight: 800; }
-    .proj-award-badge {
-      font-family: var(--mono); font-size: 0.6rem;
-      color: var(--accent); border: 1px solid rgba(232,255,71,0.4);
-      padding: 0.2rem 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
-    }
-    .proj-desc { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); line-height: 1.8; max-width: 640px; margin-bottom: 1.25rem; }
-    .proj-tech { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
-    .tech-tag {
-      font-family: var(--mono); font-size: 0.85rem; color: var(--muted);
-      border: 1px solid var(--border); padding: 0.2rem 0.7rem;
-      text-transform: uppercase; letter-spacing: 0.05em;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .project-card:hover .tech-tag { border-color: #333; }
-
-    .proj-links { display: flex; gap: 0.75rem; }
-    .proj-link {
-      font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.1em;
-      text-transform: uppercase; text-decoration: none;
-      padding: 0.45rem 1rem; border: 1px solid var(--border);
-      color: var(--muted); transition: all 0.2s;
-    }
-    .proj-link:hover { border-color: var(--accent); color: var(--accent); }
-    .proj-link.disabled { opacity: 0.3; pointer-events: none; }
-
-    .proj-side { text-align: right; padding-top: 0.3rem; }
-    .pc-arrow { font-size: 1.2rem; color: var(--muted); transition: all 0.25s; display: block; }
-    .proj-year { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
-
-    /* CTA strip */
-    .cta-strip {
-      background: var(--bg2); padding: 3rem 2.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 2rem; flex-wrap: wrap;
-    }
-    .cta-text h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.4rem; }
-    .cta-text p { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); }
-
-    @media (max-width: 768px) {
-      .project-card { grid-template-columns: 1fr; gap: 1rem; }
-      .proj-index { display: none; }
-      .proj-side { display: none; }
-      .cta-strip { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
 </head>
 <body>
 
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
 
-  <nav id="mainNav">
-    <a href="index.html" class="nav-logo">ayet.me</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ayet.me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <div class="page-wrapper">
-    <div class="page-hero reveal">
-      <div class="page-hero-tag">My Work</div>
-      <h1>Projects<span>.</span></h1>
-    </div>
-
-    <div class="section-inner" style="padding-bottom:0; padding-top: 2rem;">
-      <p style="font-family: var(--mono); font-size: 0.85rem; color: var(--muted); max-width: 500px; line-height: 1.8;" class="reveal">
-        A collection of real projects built during my diploma, hackathons and personal time. Each one taught me something different. Planned to add more projects soon including open source contributions and smaller utilities.
-      </p>
-    </div>
-
-    <!-- Projects List -->
-    <div class="section-inner" style="padding-top: 2rem;">
-      <div class="projects-list reveal">
-
-        <!-- 01 CareLink -->
-        <div class="project-card">
-          <div class="proj-index">01</div>
-          <div class="proj-body">
-            <div class="proj-header">
-              <span class="proj-title">CareLink</span>
-              <span class="proj-award-badge">🏆 Best Overall</span>
-            </div>
-            <p class="proj-desc">
-              A healthcare-focused application designed to improve communication and accessibility between patients and healthcare services. Built as a Final Year Project, CareLink was recognised as the Best Overall Project at JTMK ICE 2026/2027, competing against 40+ teams. Focused on creating a seamless user experience while solving real-world healthcare challenges.
-            </p>
-            <div class="proj-tech">
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">Android</span>
-              <span class="tech-tag">REST API</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">UI/UX</span>
-            </div>
-            <div class="proj-links">
-              <a href="https://github.com/izzxrith/carelinkapps_.git" class="proj-link">GitHub ↗</a>
-            </div>
-          </div>
-          <div class="proj-side">
-            <span class="pc-arrow">↗</span>
-            <div class="proj-year">2026</div>
-          </div>
-        </div>
-
-        <!-- 02 FightTrack -->
-        <div class="project-card">
-          <div class="proj-index">02</div>
-          <div class="proj-body">
-            <div class="proj-header">
-              <span class="proj-title">FightTrack</span>
-            </div>
-            <p class="proj-desc">
-              A gym and boxing training tracker with a full dashboard. Built from personal experience as an amateur boxer, FightTrack lets users log training sessions, track performance metrics, and monitor progress over time. The dashboard provides a clean overview of all recorded data.
-            </p>
-            <div class="proj-tech">
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Bootstrap</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="proj-links">
-              <a href="https://github.com/izzxrith/FightTrack.git" class="proj-link">GitHub ↗</a>
-            </div>
-          </div>
-          <div class="proj-side">
-            <span class="pc-arrow">↗</span>
-            <div class="proj-year">2026</div>
-          </div>
-        </div>
-
-        <!-- 03 CareLink Website -->
-        <div class="project-card">
-          <div class="proj-index">03</div>
-          <div class="proj-body">
-            <div class="proj-header">
-              <span class="proj-title">CareLink Promotional Website</span>
-            </div>
-            <p class="proj-desc">
-              A promotional website for the CareLink healthcare application, showcasing its features and benefits. Built with a focus on user experience and responsive design. The site includes detailed sections on the app's functionality, user testimonials and a call-to-action to download the app. Designed to effectively communicate the value of CareLink to potential users and stakeholders.
-            </p>
-            <div class="proj-tech">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">Bootstrap</span>
-            </div>
-            <div class="proj-links">
-              <a href="https://github.com/izzxrith/CareLinkPlus-.git" class="proj-link">GitHub ↗</a>
-            </div>
-          </div>
-          <div class="proj-side">
-            <span class="pc-arrow">↗</span>
-            <div class="proj-year">2026</div>
-          </div>
-        </div>
-
-        
-
-      </div>
-
-      <!-- CTA Strip -->
-      <div class="cta-strip reveal" style="margin-top: 1px;">
-        <div class="cta-text">
-          <h3>More on GitHub</h3>
-          <p>All source code is publicly available on my GitHub profile.</p>
-        </div>
-        <a href="https://github.com/izzxrith" target="_blank" class="btn btn-ghost">github.com/izzxrith ↗</a>
-      </div>
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">// my work</p>
+      <h1>Projects.</h1>
+      <p class="mt-2">Real software built during my diploma, hackathons and personal time. Each one is on GitHub.</p>
     </div>
   </div>
 
-  <div class="divider"></div>
+  <section style="padding-top:0">
+    <div class="container">
+
+      <!-- FEATURED: CareLink+ -->
+      <p class="section-label">// featured</p>
+      <div style="display:grid; gap:1rem; margin-bottom:3rem;">
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <div>
+              <span class="pill green" style="display:inline-flex; margin-bottom:0.875rem;">Best Overall - JTMK ICE 2026/2027</span>
+              <h2 style="font-size:1.5rem;">CareLink+</h2>
+              <p class="mono text-muted mt-1">Android Mobile Application · 2026</p>
+            </div>
+          </div>
+          <p class="project-desc mt-2">
+            A real-time health monitoring system for special needs students - integrating wearable smartwatch sensor data with predictive algorithms to detect risks before they become emergencies. Built across the full SDLC from requirements gathering through to deployment. Ranked #1 out of 40+ competing teams.
+          </p>
+
+          <!-- Metrics -->
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:var(--radius); margin:1.5rem 0; overflow:hidden;">
+            <div style="background:var(--bg); padding:1rem; text-align:center;">
+              <div style="font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:700; color:var(--accent);">100+</div>
+              <div class="mono text-muted" style="font-size:0.6rem; margin-top:0.2rem;">Students Served</div>
+            </div>
+            <div style="background:var(--bg); padding:1rem; text-align:center;">
+              <div style="font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:700; color:var(--accent);">40%</div>
+              <div class="mono text-muted" style="font-size:0.6rem; margin-top:0.2rem;">Fewer Emergencies</div>
+            </div>
+            <div style="background:var(--bg); padding:1rem; text-align:center;">
+              <div style="font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:700; color:var(--accent);">&lt;2s</div>
+              <div class="mono text-muted" style="font-size:0.6rem; margin-top:0.2rem;">Dual-Device Sync</div>
+            </div>
+          </div>
+
+          <div class="project-meta">
+            <span class="tag">Java</span><span class="tag">Android Studio</span>
+            <span class="tag">Firebase</span><span class="tag">Google Maps API</span>
+            <span class="tag">REST API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/izzxrith/carelinkapps_" class="btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <!-- FEATURED: FightTrack SaaS -->
+        <div class="project-card featured">
+          <div class="project-header">
+            <div>
+              <span class="pill" style="display:inline-flex; margin-bottom:0.875rem; border-color:var(--accent); color:var(--accent);">In Active Development</span>
+              <h2 style="font-size:1.5rem;">FightTrack SaaS</h2>
+              <p class="mono text-muted mt-1">Multi-Tenant Web Platform · 2026 - Present</p>
+            </div>
+          </div>
+          <p class="project-desc mt-2">
+            A multi-tenant SaaS platform for boxing gyms and coaches to manage members, training sessions and performance data with full data isolation per tenant, role-based access control and a modern dashboard. Evolved from the original FightTrack project. Targeting public beta.
+          </p>
+          <div class="project-meta">
+            <span class="tag">Next.js 14</span><span class="tag">TypeScript</span>
+            <span class="tag">Supabase</span><span class="tag">Prisma</span>
+            <span class="tag">Tailwind CSS</span><span class="tag">PostgreSQL</span>
+            <span class="tag">Zod</span><span class="tag">RLS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/izzxrith/fighttrack-saas" class="btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECONDARY PROJECTS -->
+      <p class="section-label">// other projects</p>
+      <div class="projects-secondary">
+
+        <div class="project-card">
+          <h3>FightTrack</h3>
+          <p class="mono text-muted mt-1" style="font-size:0.7rem;">Full-Stack Web App · 2026</p>
+          <p class="project-desc mt-2" style="font-size:0.9rem;">Gym and boxing training tracker - log sessions, track performance metrics, full dashboard. The v1 that spawned the SaaS.</p>
+          <div class="project-meta">
+            <span class="tag">PHP</span><span class="tag">MySQL</span>
+            <span class="tag">Bootstrap</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/izzxrith/FightTrack" class="btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>CareLink+ Promotional Website</h3>
+          <p class="mono text-muted mt-1" style="font-size:0.7rem;">Web · Feb - May 2026</p>
+          <p class="project-desc mt-2" style="font-size:0.9rem;">Responsive promotional site for CareLink+ - communicating features and social impact to stakeholders and end users.</p>
+          <div class="project-meta">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span><span class="tag">Bootstrap</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/izzxrith/CareLinkPlus-" class="btn" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Personal Portfolio</h3>
+          <p class="mono text-muted mt-1" style="font-size:0.7rem;">Web · 2025 - Present</p>
+          <p class="project-desc mt-2" style="font-size:0.9rem;">This site. Built from scratch with vanilla HTML/CSS/JS, hosted on GitHub Pages with a custom domain.</p>
+          <div class="project-meta">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/izzxrith/izzxrith.github.io" class="btn" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://ayet.me" class="btn">Live ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GitHub CTA -->
+      <div style="margin-top:3rem; padding:2rem; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <p class="mono text-muted" style="margin-bottom:0.25rem;">// all source code</p>
+          <p style="font-size:0.9375rem; margin:0;">Everything is public on GitHub.</p>
+        </div>
+        <a href="https://github.com/izzxrith" class="btn primary" target="_blank" rel="noopener">github.com/izzxrith ↗</a>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
-    <div class="footer-copy">© 2026 <span>Ayet</span> — Built with intention.</div>
-    <a href="index.html" class="footer-back">← Home</a>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2026 Ayet - Built with intention.</span>
+        <div style="display:flex; gap:1rem;">
+          <a href="https://github.com/izzxrith" class="footer-copy" style="color:var(--text);opacity:0.6;" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://linkedin.com/in/muhammad-izzarith" class="footer-copy" style="color:var(--text);opacity:0.6;" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

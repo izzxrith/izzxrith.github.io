@@ -3,191 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skills — Ayet</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="description" content="Technical skills of Muhammad Izzarith - TypeScript, Next.js, React, PHP, Java, Android, MySQL, Firebase and more." />
+  <title>Skills - Ayet</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    .skills-sections { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
-
-    .skill-section {
-      background: var(--bg);
-      display: grid; grid-template-columns: 260px 1fr;
-      gap: 0; min-height: 140px;
-    }
-    .ss-label {
-      padding: 2.5rem; border-right: 1px solid var(--border);
-      display: flex; flex-direction: column; justify-content: center;
-    }
-    .ss-num { font-family: var(--mono); font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
-    .ss-title { font-size: 1.1rem; font-weight: 700; }
-    .ss-desc { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.6; }
-
-    .ss-pills {
-      padding: 2.5rem; display: flex; flex-wrap: wrap;
-      gap: 0.6rem; align-items: center; align-content: center;
-    }
-    .pill {
-      font-family: var(--mono); font-size: 0.85rem;
-      padding: 0.55rem 1.1rem; border: 1px solid var(--border);
-      color: var(--text); transition: all 0.2s;
-    }
-    .pill:hover { border-color: var(--accent); color: var(--accent); background: rgba(232,255,71,0.03); }
-    .pill.highlight { border-color: rgba(232,255,71,0.3); color: var(--accent); }
-
-    /* Learning strip */
-    .learning-strip {
-      background: var(--bg2); padding: 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-    .ls-title { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1.25rem; }
-    .ls-items { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-    .ls-item {
-      font-family: var(--mono); font-size: 0.8rem; color: var(--muted);
-      border: 1px dashed var(--border); padding: 0.45rem 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .skill-section { grid-template-columns: 1fr; }
-      .ss-label { border-right: none; border-bottom: 1px solid var(--border); padding: 1.5rem; }
-      .ss-pills { padding: 1.5rem; }
-    }
-  </style>
 </head>
 <body>
 
   <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
 
-  <nav id="mainNav">
-    <a href="index.html" class="nav-logo">ayet.me</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">ayet.me</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <div class="page-wrapper">
-    <div class="page-hero reveal">
-      <div class="page-hero-tag">What I Know</div>
-      <h1>Skills<span>.</span></h1>
-    </div>
-
-    <div class="section-inner" style="padding-bottom: 0; padding-top: 2rem;">
-      <p style="font-family: var(--mono); font-size: 0.85rem; color: var(--muted); line-height: 1.8; max-width: 500px;" class="reveal">
-        Built through coursework, projects and competitions. Always expanding.
-      </p>
-    </div>
-
-    <div class="section-inner" style="padding-top: 2rem;">
-      <div class="skills-sections reveal">
-
-        <div class="skill-section">
-          <div class="ss-label">
-            <div class="ss-num">01</div>
-            <div class="ss-title">Languages</div>
-            <div class="ss-desc">Core programming languages I can write production code in.</div>
-          </div>
-          <div class="ss-pills">
-            <span class="pill highlight">Java</span>
-            <span class="pill highlight">PHP</span>
-            <span class="pill">Python</span>
-            <span class="pill">C++</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">SQL</span>
-          </div>
-        </div>
-
-        <div class="skill-section">
-          <div class="ss-label">
-            <div class="ss-num">02</div>
-            <div class="ss-title">Mobile & Frontend</div>
-            <div class="ss-desc">Building user-facing apps across mobile and web platforms.</div>
-          </div>
-          <div class="ss-pills">
-            <span class="pill highlight">Android Development</span>
-            <span class="pill highlight">Android Studio</span>
-            <span class="pill">Bootstrap 5</span>
-            <span class="pill">HTML & CSS</span>
-            <span class="pill">UI/UX Design</span>
-            <span class="pill">Responsive Design</span>
-          </div>
-        </div>
-
-        <div class="skill-section">
-          <div class="ss-label">
-            <div class="ss-num">03</div>
-            <div class="ss-title">Backend & APIs</div>
-            <div class="ss-desc">Server-side logic, databases, and API design.</div>
-          </div>
-          <div class="ss-pills">
-            <span class="pill highlight">REST APIs</span>
-            <span class="pill highlight">MySQL</span>
-            <span class="pill">PHP Backend</span>
-            <span class="pill">Database Design</span>
-            <span class="pill">OOP Principles</span>
-            <span class="pill">CRUD Operations</span>
-          </div>
-        </div>
-
-        <div class="skill-section">
-          <div class="ss-label">
-            <div class="ss-num">04</div>
-            <div class="ss-title">Tools & Workflow</div>
-            <div class="ss-desc">The dev environment and collaboration tools I use daily.</div>
-          </div>
-          <div class="ss-pills">
-            <span class="pill highlight">Git</span>
-            <span class="pill highlight">GitHub</span>
-            <span class="pill highlight">VS Code</span>
-            <span class="pill">XAMPP</span>
-            <span class="pill">Figma</span>
-            <span class="pill">Postman</span>
-          </div>
-        </div>
-
-        <div class="skill-section">
-          <div class="ss-label">
-            <div class="ss-num">05</div>
-            <div class="ss-title">Concepts</div>
-            <div class="ss-desc">Software engineering principles and methodologies.</div>
-          </div>
-          <div class="ss-pills">
-            <span class="pill">Object-Oriented Programming</span>
-            <span class="pill">Software Development Lifecycle</span>
-            <span class="pill">Database Normalisation</span>
-            <span class="pill">Agile Basics</span>
-            <span class="pill">Problem Solving</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Currently Learning
-      <div class="learning-strip reveal">
-        <div class="ls-title">Currently learning →</div>
-        <div class="ls-items">
-          <span class="ls-item">Next.js</span>
-          <span class="ls-item">Tailwind CSS</span>
-          <span class="ls-item">React</span>
-          <span class="ls-item">TypeScript</span>
-          <span class="ls-item">Docker basics</span>
-        </div>
-      </div>
+  <div class="page-header">
+    <div class="container">
+      <p class="section-label">// technical skills</p>
+      <h1>Stack.</h1>
+      <p class="mt-2">Tools and technologies I use to build real software - not a checklist, a working stack.</p>
     </div>
   </div>
-    -->
-  <div class="divider"></div>
+
+  <section style="padding-top:0">
+    <div class="container">
+      <div class="two-col">
+
+        <!-- LEFT -->
+        <div>
+          <div class="skill-group">
+            <p class="skill-group-label">Current Stack - Daily Use</p>
+            <div class="skill-tags">
+              <span class="skill-tag primary">TypeScript</span>
+              <span class="skill-tag primary">JavaScript</span>
+              <span class="skill-tag primary">Next.js 14</span>
+              <span class="skill-tag primary">React</span>
+              <span class="skill-tag primary">Tailwind CSS</span>
+              <span class="skill-tag primary">PHP</span>
+              <span class="skill-tag primary">MySQL</span>
+              <span class="skill-tag primary">Git / GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">Backend & Database</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Supabase</span>
+              <span class="skill-tag">Prisma</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">REST API Design</span>
+              <span class="skill-tag">Row Level Security</span>
+              <span class="skill-tag">Zod</span>
+              <span class="skill-tag">bcrypt</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">Mobile</p>
+            <div class="skill-tags">
+              <span class="skill-tag primary">Java (Android)</span>
+              <span class="skill-tag primary">Android Studio</span>
+              <span class="skill-tag primary">Android SDK</span>
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Google Maps API</span>
+              <span class="skill-tag">Firebase Realtime DB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div>
+          <div class="skill-group">
+            <p class="skill-group-label">Languages</p>
+            <div class="skill-tags">
+              <span class="skill-tag primary">TypeScript</span>
+              <span class="skill-tag primary">JavaScript</span>
+              <span class="skill-tag primary">Java</span>
+              <span class="skill-tag primary">PHP</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C++</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">Tools & Environment</p>
+            <div class="skill-tags">
+              <span class="skill-tag primary">VS Code</span>
+              <span class="skill-tag primary">GitHub</span>
+              <span class="skill-tag primary">Android Studio</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">GitHub Pages</span>
+              <span class="skill-tag">Namecheap DNS</span>
+              <span class="skill-tag">Formspree</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">Core Competencies</p>
+            <div class="skill-tags">
+              <span class="skill-tag">SDLC</span>
+              <span class="skill-tag">Algorithm Design</span>
+              <span class="skill-tag">Debugging</span>
+              <span class="skill-tag">REST API Integration</span>
+              <span class="skill-tag">UI/UX</span>
+              <span class="skill-tag">Technical Documentation</span>
+              <span class="skill-tag">Multi-Tenant Architecture</span>
+              <span class="skill-tag">Information Security</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-label">Certification</p>
+            <div class="skill-tags">
+              <span class="skill-tag primary" style="border-color:var(--accent); color:var(--accent);">CompTIA Security+</span>
+              <span class="skill-tag primary" style="border-color:var(--accent); color:var(--accent);">META Version Control</span>
+              <span class="skill-tag primary" style="border-color:var(--accent); color:var(--accent);">META Programming with JS</span>
+              <span class="skill-tag primary" style="border-color:var(--accent); color:var(--accent);">META HTML & CSS in Depth</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Currently learning -->
+      <div style="margin-top:3rem; padding:2rem; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);">
+        <p class="mono text-muted" style="margin-bottom:1rem;">// currently learning</p>
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+          <span class="skill-tag" style="border-color:#333;">Docker</span>
+          <span class="skill-tag" style="border-color:#333;">CI/CD</span>
+          <span class="skill-tag" style="border-color:#333;">AWS (Free Tier)</span>
+          <span class="skill-tag" style="border-color:#333;">Testing (Jest)</span>
+          <span class="skill-tag" style="border-color:#333;">Node.js</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
-    <div class="footer-copy">© 2026 <span>Ayet</span> — Built with intention.</div>
-    <a href="index.html" class="footer-back">← Home</a>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">© 2026 Ayet - Built with intention.</span>
+        <div style="display:flex; gap:1rem;">
+          <a href="https://github.com/izzxrith" class="footer-copy" style="color:var(--text);opacity:0.6;" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://linkedin.com/in/muhammad-izzarith" class="footer-copy" style="color:var(--text);opacity:0.6;" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
