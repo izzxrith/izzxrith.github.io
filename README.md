@@ -71,7 +71,7 @@ izzxrith.github.io/
 ### CareLink+ — Android Mobile Application
 > Best Overall Project - JTMK ICE I 2026/2027 (40+ teams)
 
-Real-time health monitoring system for special needs students. Integrates wearable smartwatch data with predictive algorithms to detect risks early. 100+ students served, 40% reduction in reactive emergencies, <2s dual-device sync.
+Real-time health monitoring system for special needs students. Integrates wearable smartwatch data with predictive algorithms to detect risks early. 200+ students served, 40% reduction in reactive emergencies, <2s dual-device sync.
 
 **Stack:** Java · Android Studio · Firebase · Google Maps API · REST API
 
